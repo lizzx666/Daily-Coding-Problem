@@ -22,7 +22,9 @@ def products(nums):
     return new_array
  
     
-print(products([1,2,3,4,7,8]))  
+nums = [1,2,3,4,5]        
+
+print(products(nums)) 
 
 #method 2:
 def products(nums):
