@@ -40,7 +40,8 @@ def products(nums):
         suffix_products.append(suffix_products[-1] * num)
       else:
         suffix_products.append(num)
-    suffix_products = list(reversed(suffix_products))
+    #suffix_products = list(reversed(suffix_products))
+    suffix_products = suffix_products[::-1]
         
         
     result = []
