@@ -17,6 +17,7 @@ def window(array):
 
 window([2,3,4,7,5,2,8,6])  
 
+#method 2:
 def window(array):
     length = 0
     k = 0
