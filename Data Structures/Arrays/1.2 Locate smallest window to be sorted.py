@@ -9,8 +9,8 @@ def window(array):
     l = len(array) - 1
     while k>=0 and array[k]<=array[k+1]:
         k+=1
-    if k == len(array)-2:
-        return 0
+        if k == len(array)-2:
+            return 0
     while array[k]<array[l]:
         l-=1
     return (k,l-k+1)
