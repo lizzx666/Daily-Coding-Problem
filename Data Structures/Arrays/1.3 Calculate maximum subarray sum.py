@@ -19,9 +19,33 @@
 
 
 
+
+
 def max_subarray_sum(arr):
     max_ending_here = max_so_far = 0
     for i in arr:
         max_ending_here = max(i, max_ending_here + i)
         max_so_far = max(max_so_far, max_ending_here)
     return max_so_far
+
+
+
+# Follow-up
+def maximum_circular_subarray(arr):
+    
+    def max_subarray_sum(arr):
+        max_ending_here = max_so_far = 0
+        for i in arr:
+            max_ending_here = max(i, max_ending_here + i)
+            max_so_far = max(max_so_far, max_ending_here)
+        return max_so_far
+
+    def min_subarray_sum(arr):
+        min_ending_here = min_so_far = 0
+        for i in arr:
+            min_ending_here = min(i, min_ending_here + i)
+            min_so_far = min(min_so_far, min_ending_here)
+        return min_so_far
+
+    max_subarray_wraparound = sum(arr) - min_subarray_sum(arr)
+    return max(max_subarray_sum(arr),max_subarray_wraparound)
