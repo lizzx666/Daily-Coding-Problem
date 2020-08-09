@@ -7,3 +7,21 @@
 
 # Follow-up: What if the elements can wrap around? For example, given [8, -1, 3, 4], return 15, 
 # as we choose the numbers 3,4 and 8 where 8 is obtained from wrapping around.
+
+
+
+
+
+
+
+
+
+
+
+
+def max_subarray_sum(arr):
+    max_ending_here = max_so_far = 0
+    for i in arr:
+        max_ending_here = max(i, max_ending_here + i)
+        max_so_far = max(max_so_far, max_ending_here)
+    return max_so_far
