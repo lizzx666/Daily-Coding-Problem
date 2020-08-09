@@ -7,3 +7,22 @@
 # There are 2 smaller elements to the right of 9
 # There is 1 smaller element to the right of 6
 # There is no smaller element to the right of 1
+
+
+
+
+
+
+
+
+
+
+
+#method 1: naive solution
+def smaller_counts_naive(lst):
+    result = []
+    for i,num in enumerate(lst):
+        count = sum(val < num for val in lst[i+1:])
+        result.append(count)
+        
+    return result   
