@@ -29,6 +29,18 @@ def smaller_counts_naive(lst):
 
 
 #method 2:
+#bisect: Maintains a list in sorted order without having to call sort each time an item is added to the list
+#bisect_left(list, num, beg, end) :- This function returns the position in the sorted list, 
+#where the number passed in argument can be placed so as to maintain the resultant list in sorted order. 
+#If the element is already present in the list, the left most position where element has to be inserted is returned.
+
+#bisect_right = bisect : If the element is already present in the list, the left most position where element has to be inserted is returned.
+
+#insort(list, num, beg, end) :- This function returns the sorted list after inserting number in appropriate position, 
+#if the element is already present in the list, the element is inserted at the rightmost possible position. 
+
+#insort =  insort_right
+#insort left:if the element is already present in the list, the element is inserted at the leftmost possible position. 
 def smaller_counts(lst):
     result = []
     seen = []
